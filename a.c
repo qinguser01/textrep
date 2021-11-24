@@ -7,8 +7,8 @@
 
 int main(void)
 {
-
-	printf("wangqingdashab\n");
+	int a=0;
+	printf("wangqingdashab%d\n",a);
 	return 0;
 
 }
