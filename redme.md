@@ -53,3 +53,15 @@ int main(void)
 }
 
 ```
+
+```cpp
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	printf("就是测试c++就是玩\n");
+	return 0;
+
+}
+```
