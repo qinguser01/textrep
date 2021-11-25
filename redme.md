@@ -24,3 +24,7 @@
 >> 再引用文本
 >>> zaiazia引用文本
 >>>> zaizaizai引用文本
+
+学习吧，在[github](https://github.com)上好好学习
+你也可以在[github][1]上学
+[1]:https://github.com
