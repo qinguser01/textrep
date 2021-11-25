@@ -34,3 +34,22 @@
 去网站上上传图片[sm.ms](https://sm.ms/)
 
 上传图片![捕获.PNG](https://i.loli.net/2021/11/25/jgwa7i9XuyVoWTM.png)
+
+
+```bash
+sudo apt-get install git
+
+```
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+int main(void)
+{
+	printf("就是测试c就是玩\n");
+	return 0;
+}
+
+```
