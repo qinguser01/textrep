@@ -30,3 +30,7 @@
 你也可以在[github][1]上学
 
 [1]:https://github.com
+
+去网站上上传图片[sm.ms](https://sm.ms/)
+
+上传图片![捕获.PNG](https://i.loli.net/2021/11/25/jgwa7i9XuyVoWTM.png)
