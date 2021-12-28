@@ -65,3 +65,45 @@ int main()
 
 }
 ```
+```c
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<string.h>
+#include<sys/wait.h>
+
+
+ int main(void)
+{
+pid_t pid;
+pid = fork();
+pid_t  zpid;
+int status;
+if(pid>0)
+{
+printf("parent pid %d\n",getpid());
+zpid = wait(&status);
+if(WIFEXITED(status))
+{
+	printf("zpid %d ,%d\n",zpid,WEXITSTATUS(status));
+}
+if(WIFSIGNALED(status))
+{
+	printf("zpid %d ,%d",zpid,WTERMSIG(status));
+}
+}else if(pid==0){
+	printf("child pid %d\n",getpid());
+	while(1);
+}else{
+	perror("fork is failed\n");
+	exit(-1);
+	}
+	return 0;
+}
+```
+* wait阻塞型回收僵尸进程，
+	* 会暂停所有进程，直到子进程结束再开始
+1. waitpid非阻塞型回收僵尸进程
+	1. 会等待子进程结束的同时，进行其他进程
+2. 当子进程结束时，父进程并未结束，且父进程没有回收子进程就会产生僵尸进程
+	2. 主要是PCB没有回收，造成了泄露
